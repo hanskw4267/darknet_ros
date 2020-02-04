@@ -1,0 +1,16 @@
+yolo_model:
+
+  config_file:
+    name: yolo3radar.cfg
+  weight_file:
+    name: yolo3radar.weights
+  threshold:
+    value: 0.3
+  detection_classes:
+    names:
+      - car
+      - red_armour
+      - blue_armour
+      - sentry
+      - base
+      - ignore

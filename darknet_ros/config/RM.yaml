@@ -1,0 +1,14 @@
+yolo_model:
+
+  config_file:
+    name: RMTinyYolo.cfg
+  weight_file:
+    name: RMTinyYolo.weights
+  threshold:
+    value: 0.3
+  detection_classes:
+    names:
+      - plate1
+      - plate2
+      - plate3
+      - plate4

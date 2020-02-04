@@ -1,0 +1,5 @@
+classes= 6
+train  = rmtrain.txt  
+valid  = rmtest.txt  
+names = yolo3radar.names  
+backup = backup

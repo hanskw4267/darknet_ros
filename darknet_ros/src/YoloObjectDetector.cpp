@@ -422,7 +422,7 @@ void *YoloObjectDetector::fetchInThread()
 void *YoloObjectDetector::displayInThread(void *ptr)
 {
   show_image_cv(buff_[(buffIndex_ + 1)%3], "YOLO V3", ipl_);
-  int c = cv::waitKey(waitKeyDelay_);
+  int c = cvWaitKey(waitKeyDelay_);
   if (c != -1) c = c%256;
   if (c == 27) {
       demoDone_ = 1;
@@ -521,12 +521,12 @@ void YoloObjectDetector::yolo()
   int count = 0;
 
   if (!demoPrefix_ && viewImage_) {
-      cv::namedWindow("YOLO V3", cv::WINDOW_NORMAL);
+    cvNamedWindow("YOLO V3", CV_WINDOW_NORMAL);
     if (fullScreen_) {
-      cv::setWindowProperty("YOLO V3", cv::WND_PROP_FULLSCREEN, cv::WINDOW_FULLSCREEN);
+      cvSetWindowProperty("YOLO V3", CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
     } else {
-      cv::moveWindow("YOLO V3", 0, 0);
-      cv::resizeWindow("YOLO V3", 640, 480);
+      cvMoveWindow("YOLO V3", 0, 0);
+      cvResizeWindow("YOLO V3", 640, 480);
     }
   }
 
